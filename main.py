@@ -23,6 +23,15 @@ def register_user(email: str, background_tasks: BackgroundTasks):
 def read_root():
     return {"message": "API is working"}
 
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
+
+
    
 
 app.include_router(users.router)
