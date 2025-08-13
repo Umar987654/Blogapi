@@ -4,6 +4,7 @@ build:
   commands:
     pre-build:
       - python --version
+      - pip install --upgrade pip setuptools wheel
     build:
       - pip install --no-cache-dir -r requirements.txt
     post-build:
